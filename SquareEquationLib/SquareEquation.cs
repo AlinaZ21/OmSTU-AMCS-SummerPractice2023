@@ -14,7 +14,7 @@ public class SquareEquation
         }
         double[] roots;
         double x1, x2;
-        b /= a;
+        b =b / a;
         c /= a;
         double D = Math.Pow(b,2) - 4 * c;
         if (D <= -eps)

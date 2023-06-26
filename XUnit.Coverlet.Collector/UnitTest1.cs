@@ -19,7 +19,6 @@ public class UnitTest1
     [InlineData(1, 1, double.NaN)]
     public void TestException(double a, double b, double c)
     {
-        //var squareEquation = new SquareEquation();
         var argExc = new ArgumentException();
         try
         {
@@ -36,7 +35,6 @@ public class UnitTest1
     [InlineData(4, 8, 4)]
     public void TestOneRoot(double a, double b, double c)
     {
-        //var squareEquation = new SquareEquation();
         double[] roots = SquareEquation.Solve(a, b, c);
 
         bool rightSolution = true;
@@ -57,7 +55,6 @@ public class UnitTest1
     [InlineData(4, 88, 4)]
     public void TestTwoRoots(double a, double b, double c)
     {
-        //var SquareEquation = new SquareEquation();
         double[] roots = SquareEquation.Solve(a, b, c);
         bool rightSolution = true;
         double eps = 1e-9;
@@ -77,7 +74,6 @@ public class UnitTest1
     [InlineData(1, 1, 24)]
     public void TestNoRoots(double a, double b, double c)
     {
-        //var SquareEquation = new SquareEquation();
         double[] roots = SquareEquation.Solve(a, b, c);
         Assert.Empty(roots);
     }

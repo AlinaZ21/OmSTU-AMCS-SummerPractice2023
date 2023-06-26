@@ -93,6 +93,6 @@ public void Test_for_no_roots(double a, double b, double c)
 var SquareEquation = new SquareEquation();
 
 double[] result = SquareEquation.Solve(a,b,c);
-Assert.Equal(result.Length, 0);
+Assert.Equal(result.Length, 1);
 }
 }

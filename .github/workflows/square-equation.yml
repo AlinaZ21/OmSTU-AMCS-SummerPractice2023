@@ -26,5 +26,5 @@ jobs:
         run: ./SquareEquationTest ./SquareEquationLib/bin/Debug/net7.0/SquareEquationLib.dll
 
       - name: XUnit test
-        run: cd .. && pwd
+        run: cd XUnit.Coverlet.MSBuild/ && dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
       

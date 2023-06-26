@@ -46,7 +46,7 @@ var SquareEquation = new SquareEquation();
 double[] result = SquareEquation.Solve(a,b,c);
 
 bool rightSolution = true;
-double e = 1e-8;
+double e = 1e-9;
 
 foreach(var i in result)
 {

@@ -26,5 +26,5 @@ jobs:
         run: ./SquareEquationTest ./SquareEquationLib/bin/Debug/net7.0/SquareEquationLib.dll
 
       - name: XUnit test
-        run: pwd
+        run: cd .. && pwd
       

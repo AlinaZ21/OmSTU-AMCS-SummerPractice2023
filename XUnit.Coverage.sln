@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquareEquationLib", "SquareEquationLib\SquareEquationLib.csproj", "{5AB0636B-8AD4-42E8-B64B-78E63F996056}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spacebattle", "spacebattle\spacebattle.csproj", "{76E210DB-D257-4B67-B93E-93EF0BFA04BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spacebattletests", "spacebattletests\spacebattletests.csproj", "{14B61359-0752-43FC-8310-6DDE36544548}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5AB0636B-8AD4-42E8-B64B-78E63F996056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AB0636B-8AD4-42E8-B64B-78E63F996056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AB0636B-8AD4-42E8-B64B-78E63F996056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AB0636B-8AD4-42E8-B64B-78E63F996056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76E210DB-D257-4B67-B93E-93EF0BFA04BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76E210DB-D257-4B67-B93E-93EF0BFA04BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76E210DB-D257-4B67-B93E-93EF0BFA04BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76E210DB-D257-4B67-B93E-93EF0BFA04BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14B61359-0752-43FC-8310-6DDE36544548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14B61359-0752-43FC-8310-6DDE36544548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14B61359-0752-43FC-8310-6DDE36544548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14B61359-0752-43FC-8310-6DDE36544548}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

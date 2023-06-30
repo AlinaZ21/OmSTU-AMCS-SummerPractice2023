@@ -14,24 +14,39 @@ public class SquareEquation
         }
         double[] roots;
         double x1, x2;
-        b =b / a;
-        c /= a;
-        double D = Math.Pow(b,2) - 4 * c;
-        if (D <= -eps)
+        if (Math.Abs(b) > eps)
         {
-            roots = new double [0];
-            return roots;
+            b = b / a;
+            c /= a;
+            double D = Math.Pow(b, 2) - 4 * c;
+            if (D <= -eps)
+            {
+                roots = new double[0];
+                return roots;
+            }
+            else if (Math.Abs(D) < eps)
+            {
+                roots = new double[1] { -b / 2 };
+                return roots;
+            }
+            else
+            {
+                x1 = -(b + Math.Sign(b) * Math.Sqrt(D)) / 2;
+                x2 = c / x1;
+                roots = new double[2] { x1, x2 };
+                return roots;
+            }
         }
-        else if (Math.Abs(D)<eps)
+        else if (c <= eps)
         {
-            roots = new double [1] { -b / 2 };
+            x1 = Math.Pow(Math.Abs(c), 0.5);
+            x2 = -Math.Pow(Math.Abs(c), 0.5);
+            roots = new double[2] { x1, x2 };
             return roots;
         }
         else
         {
-            x1 = -(b + Math.Sign(b) * Math.Sqrt(D)) / 2;
-            x2 = c / x1;
-            roots = new double [2] { x1, x2 };
+            roots = new double[0];
             return roots;
         }
     }

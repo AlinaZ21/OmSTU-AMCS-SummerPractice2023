@@ -2,7 +2,7 @@ name: square equation test
 
 on:
   push:
-    branches: ["testbranch"]
+    branches: ["BDDtests"]
 
 jobs:
   build:
@@ -30,4 +30,7 @@ jobs:
 
       - name: XUnit Collector test
         run: cd XUnit.Coverlet.Collector && dotnet test --collect:"XPlat Code Coverage"
+
+      - name: BDD test
+        run: cd BDDtest && dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
       

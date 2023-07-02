@@ -1,8 +1,8 @@
-name: square equation test
+name: spacebattle test
 
 on:
   push:
-    branches: ["square_equation"]
+    branches: ["solution7"]
 
 jobs:
   build:
@@ -11,16 +11,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup .NET
+      - name: Setup .NET7
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: 7.0.x
 
       - name: Restore dependencies
-        run: dotnet restore SquareEquationLib
+        run: dotnet restore spacebattle
 
-      - name: Build
-        run: dotnet build SquareEquationLib --no-restore /p:ContinuousIntegrationBuild=true
+      - name: Test Build
+        run: dotnet build spacebattle --no-restore /p:ContinuousIntegrationBuild=true
 
-      - name: Test
-        run: ./SquareEquationTest ./SquareEquationLib/bin/Debug/net7.0/SquareEquationLib.dll
+      - name: BDD test
+        run: cd spacebattletests && dotnet test /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov

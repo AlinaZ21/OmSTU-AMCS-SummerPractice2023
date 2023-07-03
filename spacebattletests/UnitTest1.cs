@@ -113,6 +113,16 @@ namespace spacebattletests
             catch { }
         }
 
+        [When(@"происходит вращение вокруг собственной оси")]
+        public void происходит_вращение_вокруг_собственной_оси()
+        {
+            try
+            {
+                resultRotat = SpaceShip.Rotation(canRotation, knownCorner, knownAngularSpeen, corner, angularSpeed);
+            }
+            catch { }
+        }
+
         [Then(@"космический корабль перемещается в точку пространства с координатами \((.*), (.*)\)")]
         public void космический_корабль_перемещается_в_точку_пространства_с_координатами
         (double x, double y)

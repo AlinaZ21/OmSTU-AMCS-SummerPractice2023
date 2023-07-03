@@ -10,7 +10,8 @@ namespace spacebattletests
         private double[] position = new double[2];
         private double[] speed = new double[2];
         private double corner, angularSpeed, fuel, consumption;
-        private bool canMove = true, canRotation = true, knownSpeed = true, knownPosition = true, knownAngularSpeen = true, knownCorner = true;
+        private bool canMove = true, canRotation = true, knownSpeed = true,
+         knownPosition = true, knownAngularSpeen = true, knownCorner = true;
         private double[] resultMove = new double[2];
         private double resultRotat;
         private double resultFuel;
@@ -20,41 +21,40 @@ namespace spacebattletests
             scenarioContext = scenario_Context;
         }
 
-        [Given(@"космический корабль имеет топливо в объеме (.*)")]
+        [Given(@"космический корабль имеет топливо в объеме (.*) ед")]
         public void космический_корабль_имеет_топливо_в_объеме
         (double x)
         {
             fuel = x;
         }
 
-        [Given(@"имеет скорость расхода топлива (.*)")]
+        [Given(@"имеет скорость расхода топлива при движении (.*) ед")]
         public void имеет_скорость_расхода_топлива
         (double x)
         {
             consumption = x;
         }
 
-        [Given(@"имеет угол наклона (.*) град к оси Ох")]
+        [Given(@"космический корабль имеет угол наклона (.*) град к оси OX")]
         public void имеет_угол_наклона_к_оси_Ох
         (double x)
         {
             corner = x;
         }
-
-        [Given(@"имеет мнгновенную угловую скорость (.*) град")]
+        [Given(@"имеет мгновенную угловую скорость (.*) град")]
         public void имеет_мнгновенную_угловую_скорость
         (double x)
         {
             angularSpeed = x;
         }
 
-        [Given(@"угловую скорость корабля определить невозможно")]
+        [Given(@"мгновенную угловую скорость невозможно определить")]
         public void угловую_скорость_корабля_определить_невозможно()
         {
             knownAngularSpeen = false;
         }
 
-        [Given(@"изменить угол наклона космического корабля невозможно")]
+        [Given(@"невозможно изменить уголд наклона к оси OX космического корабля")]
         public void изменить_кгол_наклона_космического_корабля_невозможно()
         {
             canRotation = false;
@@ -89,7 +89,7 @@ namespace spacebattletests
             knownSpeed = false;
         }
 
-        [Given(@"угол наклона корабля к оси Ох определить невозможно")]
+        [Given(@"космический корабль, угол наклона которого невозможно определить")]
         public void угол_наклона_корабля_определить_невозможно()
         {
             knownCorner = false;
@@ -132,7 +132,7 @@ namespace spacebattletests
             Assert.Equal(expected, resultMove);
         }
 
-        [Then(@"новый объем топлива космического корабля \((.*)\)")]
+        [Then(@"новый объем топлива космического корабля равен (.*) ед")]
         public void новый_объем_топлива
         (double x)
         {
@@ -141,7 +141,7 @@ namespace spacebattletests
         }
 
 
-        [Then(@"новый угол наклона космического корабля \((.*)\)")]
+        [Then(@"угол наклона космического корабля к оси OX составляет (.*) град")]
         public void новый_угол_наклона
         (double x)
         {

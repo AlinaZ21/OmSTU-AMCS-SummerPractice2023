@@ -2,7 +2,7 @@ name: spacebattle test
 
 on:
   push:
-    branches: ["solution7"]
+    branches: ["addsolut7"]
 
 jobs:
   build:

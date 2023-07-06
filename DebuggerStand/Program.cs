@@ -5,7 +5,7 @@ namespace SelectSort
     {
         static void Main(string[] args)
         {
-            int[] intArray = new int[] {6, 5, 20, 100, 99, 4, 3, 1, 4, 3, 20, 99, 100, 1, 5, 6, -9, 1};
+            int[] intArray = new int[] { 6, 5, 20, 100, 99, 4, 3, 1, 4, 3, 20, 99, 100, 1, 5, 6, -9, 1 };
             Console.WriteLine("Неотсортированный массив:");
             foreach (int value in intArray)
             {
